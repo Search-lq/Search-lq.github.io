@@ -3,13 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>jQuery罗盘时钟代码 - 源码之家</title>
+<title>沈一一</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/test.js"></script>
 <script src="js/common.js"></script>
 <script src="js/config.js"></script>
+
+		<script type="text/javascript">
+			function changcolor(id)
+			{
+				document.body.style.background=document.getElementById(id).innerHTML;
+			}
+		</script>
+
 
 </head>
 
@@ -19,6 +27,188 @@
 		margin: 0;
 		padding: 0;
 	}
+
+			
+				audio{
+					position: absolute;
+					right: 0;
+					opacity: 0.1;
+					transition: all 1s;
+					
+				}
+			
+				audio:hover{
+					opacity: 1;
+				}
+			
+				.current{
+					color: #D1A3F7;
+				}
+			
+			
+				video{
+					z-index: -1;
+					/* object-fit: fill; */
+					position: fixed;
+					/* right: 0px;
+					bottom: 0px; */
+					min-width: 100%;
+					min-height: 100%;
+					/* height: auto;
+					width: auto; */
+				}
+			
+			
+				.main-content{
+					position: absolute; 
+					top:50%;
+					left: 50%;
+				}
+			
+			
+				.main-content .year{
+					position: relative;
+					top: -13px;
+					left: -38px;
+					text-align: center
+				}
+			
+				.main-content .year span{
+					position: absolute;
+					width: 80px;
+				}
+			
+			
+			
+				.main-content .month{
+					position: relative;
+					top: -13px;
+					left: 40px;
+				}
+			
+				.month span{
+					position: absolute;
+					width: 60px;
+					
+				}
+			
+			
+			
+			
+				.main-content .day{
+					position: relative;
+					top: -13px;
+					left: 85px;
+				}
+			
+				.day span{
+					position: absolute;
+					width: 65px;
+					
+				}
+			
+			
+			
+			
+				.main-content .week{
+					position: relative;
+					top: -13px;
+					left: 145px;
+				}
+				.week span{
+					position: absolute;
+					width: 65px;
+					
+				}
+			
+			
+				.main-content .shichen{
+					position: relative;
+					top: -13px;
+					left: 200px;
+				}
+				.shichen span{
+					position: absolute;
+					width: 125px;
+					
+				}
+			
+			
+				.main-content .hour{
+					position: relative;
+					top: -13px;
+					left: 240px;
+				}
+				.hour span{
+					position: absolute;
+					width: 60px;
+					
+				}
+			
+			
+				.main-content .minute{
+					position: relative;
+					top: -13px;
+					left: 300px;
+				}
+				.minute span{
+					position: absolute;
+					width: 60px;
+					
+				}
+			
+			
+				.main-content .second{
+					position: relative;
+					top: -13px;
+					left: 370px;
+				}
+				.second span{
+					position: absolute;
+					width: 60px;
+					
+				}
+			
+			/* *{
+				padding: 0px;
+				margin: 0px;
+				//background: #f1f1f1;
+			} */
+			#yase{
+				position: absolute;
+				background: #f1f1f1;
+				top: 40px;
+				padding: 5px;
+				right: 40px;
+			}
+			#yase a{
+				float: left;
+				height: 40px;
+				width: 40px;
+				//background: snow;
+				margin-left: 5px;
+				text-indent: -9999px;
+				//cursor: pointer;
+			}
+			#red{
+				background: #cc0000;
+			}
+			#yellow{
+				background: yellow;
+			}
+			#blue{
+				background: blue;
+			}
+			#snow{
+				background: snow;
+			}
+			#black{
+				background: black;
+			}
+			#green{
+				background: #828282;
+			}
+
 
 	body{
 		background-attachment: fixed;
@@ -177,7 +367,14 @@
 </style>
 
 <body>
-
+<div id="yase">
+			<a  onclick="changcolor('red')" id="red">#cc0000</a>
+			<a onclick="changcolor('yellow')" id="yellow">#ccff00</a>
+			<a onclick="changcolor('blue')" id="blue">#3300cc</a>
+			<a onclick="changcolor('snow')" id="snow">#FFFFF0</a>
+			<a onclick="changcolor('green')" id="green">#828282</a>
+			<a onclick="changcolor('black')" id="black">#0A0A0A</a>	
+		</div>
 <div class="main-content">
 	<div class="year">
 		<!-- <span>2019</span> -->
@@ -190,13 +387,6 @@
 	<div class="minute"></div>
 	<div class="second"></div>
 </div>
-<div style="text-align:center;">
-<p>更多源码：<a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>
-</div>
+
 </body>
 </html>
-
-
-  type: git
-  repo: https://github.com/Search-lq/Search-lq.github.io.git
-  branch: master
